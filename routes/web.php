@@ -14,3 +14,9 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/artikel', 'ArtikelController@index')->name('artikel');
+Route::get('/artikel/new', 'ArtikelController@new_artikel')->name('artikel.new');
